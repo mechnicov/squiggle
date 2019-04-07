@@ -4,16 +4,22 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 gem 'rails', '~> 5.2.3'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.5'
+gem 'devise', '~> 4.6.0'
+gem 'devise-i18n'
+gem 'carrierwave', '~> 1.0'
+gem 'rmagick'
+gem 'fog-aws'
 
 group :development, :test do
-
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'letter_opener'
 end
