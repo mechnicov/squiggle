@@ -1,0 +1,159 @@
+ru:
+  activerecord:
+    models:
+      user:
+        zero: Пользователей нет
+        one: Пользователь
+        few: Пользователя
+        many: Пользователей
+        other: Пользователи
+      item:
+        zero: Товаров нет
+        one: Товар
+        few: Товара
+        many: Товаров
+        other: Товары
+      category:
+        zero: Категорий нет
+        one: Категория
+        few: Категории
+        many: Категорий
+        other: Категории
+    attributes:
+      user:
+        id: '#'
+        email: Адрес электронной почты
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        is_admin: Админ
+        created_at: Создан
+        updated_at: Обновлён        
+      item:
+        id: '#'
+        price: Цена в копейках
+        name: Название
+        description: Описание
+        photo: Фотография
+        created_at: Создан
+        updated_at: Обновлён
+        category: Категория
+      category:
+        id: '#'
+        name: Название
+        created_at: Создана
+        updated_at: Обновлена
+        items: Товары
+  category:
+    label_plural:
+      zero: 'Категорий нет'
+      one: '%{count} вопрос'
+      few: '%{count} вопроса'
+      many: '%{count} вопросов'
+      other: '%{count} вопроса'
+  errors:
+    messages:
+      blank: не может быть пустым
+      confirmation: не совпадает со значением поля %{attribute}
+      empty: не может быть пустым
+      invalid: имеет неверное значение
+      taken: уже существует
+      too_long:
+        one: слишком большой длины (не может быть больше, чем %{count} символ)
+        few: слишком большой длины (не может быть больше, чем %{count} символа)
+        many: слишком большой длины (не может быть больше, чем %{count} символов)
+        other: слишком большой длины (не может быть больше, чем %{count} символов)
+      too_short:
+        one: недостаточной длины (не может быть меньше %{count} символа)
+        few: недостаточной длины (не может быть меньше %{count} символов)
+        many: недостаточной длины (не может быть меньше %{count} символов)
+        other: недостаточной длины (не может быть меньше %{count} символа)
+      content_type_whitelist_error: не является изображением
+      rmagick_processing_error: не может быть обработан(а)
+      not_a_number: не является числом
+      not_an_integer: не является целым числом
+      greater_than: может иметь значение большее %{count}
+      extension_whitelist_error: не соответствует разрешённому формату
+  date:
+    month_names:
+      - 
+      - января
+      - февраля
+      - марта
+      - апреля
+      - мая
+      - июня
+      - июля
+      - августа
+      - сентября
+      - октября
+      - ноября
+      - декабря
+  time:
+    formats:
+      long: "%-d %B %Y, %H:%M"
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: около %{count} часа
+        few: около %{count} часов
+        many: около %{count} часов
+        other: около %{count} часа
+      about_x_months:
+        one: около %{count} месяца
+        few: около %{count} месяцев
+        many: около %{count} месяцев
+        other: около %{count} месяца
+      about_x_years:
+        one: около %{count} года
+        few: около %{count} лет
+        many: около %{count} лет
+        other: около %{count} лет
+      almost_x_years:
+        one: почти 1 год
+        few: почти %{count} года
+        many: почти %{count} лет
+        other: почти %{count} лет
+      half_a_minute: меньше минуты
+      less_than_x_seconds:
+        one: меньше %{count} секунды
+        few: меньше %{count} секунд
+        many: меньше %{count} секунд
+        other: меньше %{count} секунды
+      less_than_x_minutes:
+        one: меньше %{count} минуты
+        few: меньше %{count} минут
+        many: меньше %{count} минут
+        other: меньше %{count} минуты
+      over_x_years:
+        one: больше %{count} года
+        few: больше %{count} лет
+        many: больше %{count} лет
+        other: больше %{count} лет
+      x_seconds:
+        one: "%{count} секунду"
+        few: "%{count} секунды"
+        many: "%{count} секунд"
+        other: "%{count} секунды"
+      x_minutes:
+        one: "%{count} минуту"
+        few: "%{count} минуты"
+        many: "%{count} минут"
+        other: "%{count} минуты"
+      x_days:
+        one: "%{count} день"
+        few: "%{count} дня"
+        many: "%{count} дней"
+        other: "%{count} дня"
+      x_months:
+        one: "%{count} месяц"
+        few: "%{count} месяца"
+        many: "%{count} месяцев"
+        other: "%{count} месяца"
+      x_years:
+        one: "%{count} год"
+        few: "%{count} года"
+        many: "%{count} лет"
+        other: "%{count} года"
+  admin:
+    flash:
+      error: "%{name} не %{action}"
