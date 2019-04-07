@@ -14,6 +14,8 @@ gem 'devise-i18n'
 gem 'carrierwave', '~> 1.0'
 gem 'rmagick'
 gem 'fog-aws'
+gem 'rails_admin', '~> 1.3'
+gem 'rails_admin-i18n'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
