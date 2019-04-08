@@ -45,6 +45,12 @@ ru:
         created_at: Создана
         updated_at: Обновлена
         items: Товары
+        parent: Надкатегория
+        parent_id: Надкатегория
+        children: Подкатегории
+        child_ids: Подкатегории
+        position: Позиция среди категорий одного уровня
+        ancestry: Иерархия id
   category:
     label_plural:
       zero: 'Категорий нет'
@@ -156,6 +162,11 @@ ru:
         few: "%{count} года"
         many: "%{count} лет"
         other: "%{count} года"
+  support:
+    array:
+      last_word_connector: " и "
+      two_words_connector: " и "
+      words_connector: ", "
   admin:
     flash:
       error: "%{name} не %{action}"

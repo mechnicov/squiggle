@@ -38,4 +38,34 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model Category do
+    list do
+      field :id
+      field :name
+      field :slug
+      field :parent do
+        formatted_value do
+          value.name if value
+        end
+      end
+
+      field :items
+      field :created_at
+      field :updated_at
+      field :position
+    end
+
+    edit do
+      field :name
+      field :slug
+      field :parent_id, :enum do
+        enum do
+          except = bindings[:object].id
+          Category.where.not(id: except).map { |c| [c.name, c.id] }
+        end
+      end
+      field :items
+    end
+  end
 end

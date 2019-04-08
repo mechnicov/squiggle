@@ -1,9 +1,11 @@
 class Category < ApplicationRecord
   extend FriendlyId
 
+  has_ancestry
   has_many :items, dependent: :nullify
 
   friendly_id :name, use: :slugged
+  acts_as_list scope: '#{ancestry ? "ancestry = \'#{ancestry}\'" : \'ancestry IS NULL\'}'
 
   validates :name, presence: true
   validates :slug, uniqueness: true
