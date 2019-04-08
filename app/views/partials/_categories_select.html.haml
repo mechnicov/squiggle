@@ -1,0 +1,10 @@
+- if Category.any?
+  %ul.nav.nav-pills
+    %li.dropup
+      = link_to 'Посмотреть все категории', categories_url
+      %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+        Или выбрать одну
+        %b.caret
+      %ul.dropdown-menu
+        - Category.all.each do |category|
+          %li= link_to category.name, category_url(category)

@@ -1,0 +1,9 @@
+%h2
+  Без категории
+.row.buffer-bottom
+  - if @items.any?
+    = render partial: 'items/item', collection: @items
+  - else
+    = render 'items/blank'
+.row.buffer-bottom
+  = render 'partials/categories_select'

@@ -1,0 +1,43 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=Edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : 'Загогулины'
+    = csrf_meta_tags
+    = stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css', 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = render 'layouts/shim'
+  %body
+    .navbar.navbar-default.navbar-static-top
+      .container
+        %button.navbar-toggle(data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button")
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        = link_to t('app.name'), root_path, class: 'navbar-brand'
+        .navbar-collapse.collapse.navbar-responsive-collapse
+          %ul.nav.navbar-nav
+            - if user_signed_in?
+              %li= link_to 'Панель управления', '/admin' if current_user.is_admin
+              %li= link_to 'Профиль', current_user
+              %li= link_to 'Выйти', destroy_user_session_path, method: :delete
+            - else
+              %li= link_to 'Войти', new_user_session_path
+              %li= link_to 'Зарегистрироваться', new_user_registration_path
+    .container
+      .row
+        .col-lg-9
+          - flash.each do |type, msg|
+            - type = 'success' if type == 'notice'
+            - type = 'danger' if type == 'alert'
+            %div(class="alert alert-#{type} fadeout" data-dismiss="alert")
+              %a.close &times;
+              = msg
+          = yield
+      %footer.buffer-top
+        &copy;
+        =link_to t('app.author.nick'), t('app.author.cv')
+        2019

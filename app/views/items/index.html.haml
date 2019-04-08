@@ -1,0 +1,15 @@
+%h2 Загогулины на самый взыскательный вкус
+.buffer-both
+- if @items.any?
+  .row.buffer-both
+    Сортировать: по имени
+    = link_to fa_icon('long-arrow-up'), items_url(sort: "name")
+    = link_to fa_icon('sort-amount-desc'), items_url(sort: 'name DESC')
+    по цене:
+    = link_to fa_icon('long-arrow-up'), items_url(sort: 'price')
+    = link_to fa_icon('sort-amount-desc'), items_url(sort: 'price DESC')
+- else
+  = render 'items/blank'
+.row.buffer-bottom
+  = render partial: 'items/item', collection: @items
+  = render 'partials/categories_select'

@@ -1,4 +1,9 @@
 ru:
+  app:
+    name: Загогулины
+    author:
+      nick: mechnicov
+      cv: https://mechnicov.github.io/cv/
   activerecord:
     models:
       user:
@@ -170,3 +175,4 @@ ru:
   admin:
     flash:
       error: "%{name} не %{action}"
+  are_you_sure: Вы уверены?

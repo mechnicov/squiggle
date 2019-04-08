@@ -1,0 +1,16 @@
+%h2=@category.name
+.row.buffer-bottom
+  - if @items.any?
+    .row.buffer-both
+      Сортировать: по имени
+      = link_to fa_icon('long-arrow-up'), category_url(sort: "name")
+      = link_to fa_icon('sort-amount-desc'), category_url(sort: 'name DESC')
+      по цене:
+      = link_to fa_icon('long-arrow-up'), category_url(sort: 'price')
+      = link_to fa_icon('sort-amount-desc'), category_url(sort: 'price DESC')
+    = render partial: 'items/item', collection: @items
+  - else
+    = render 'items/blank'
+.row.buffer-bottom
+  = render 'partials/all_items'
+  = render 'partials/categories_select'

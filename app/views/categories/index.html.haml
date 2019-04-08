@@ -1,0 +1,11 @@
+%h2 Все категории
+.buffer-both
+- if @categories.any?
+  .row.buffer-both
+    Сортировать: по имени
+    = link_to fa_icon('long-arrow-up'), categories_url(sort: "name")
+    = link_to fa_icon('sort-amount-desc'), categories_url(sort: 'name DESC')
+.row.buffer-bottom
+  = render partial: 'categories/category', collection: @categories
+.row.buffer-bottom
+  = render 'partials/categories_select'

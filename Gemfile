@@ -21,6 +21,8 @@ gem 'babosa'
 gem 'ancestry'
 gem 'acts_as_list'
 gem 'rails_admin_nestable', '~> 0.3.2'
+gem 'haml-rails'
+gem 'bootstrap-sass', '~> 3.4.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

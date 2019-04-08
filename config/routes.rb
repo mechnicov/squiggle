@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :items, only: [:show, :index]
+  resources :categories, only: [:show, :index]
+  resources :users, only: :show
+
+  get '/uncategorized', to: 'categories#uncategorized', as: 'uncategorized'
+  root 'items#index'
 end

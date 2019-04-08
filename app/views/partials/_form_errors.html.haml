@@ -1,0 +1,9 @@
+- errors = model.errors
+- if errors.any?
+  .alert.alert-danger.fadeout(data-dismiss="alert")
+    %a.close &times;
+    .lead.buffer-bottom
+      В вашей форме #{t('activerecord.validation.error', count: errors.count)}
+    %ul
+      - errors.full_messages.each do |message|
+        %li= message

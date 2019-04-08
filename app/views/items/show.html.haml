@@ -1,0 +1,20 @@
+%h2
+  =@item.name
+Категория:
+- if @item.category
+  = render partial: 'categories/category_link', collection: @item.category.path.reverse
+- else
+  отсутствует
+.buffer-top.row
+  .col-lg-6
+    = image_tag item_photo(@item)
+  .col-lg-6
+    %h3
+      %small
+        Цена &nbsp;
+      =item_price(@item)
+    .buffer-top-large.well.well-sm.text-center
+      = item_description(@item)
+.buffer-top-large
+  = render 'partials/all_items'
+  = render 'partials/categories_select'

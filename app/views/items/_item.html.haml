@@ -1,0 +1,12 @@
+.row
+  .col-sm-2
+    = link_to image_tag(item_thumb(item)), item_url(item)
+  .col-sm-5
+    .row
+      = link_to item.name, item_url(item)
+    .row
+      %h5=item_price(item)
+    .row
+      Категория:
+      %em= link_to category_name(item), item_category(item)
+.buffer-bottom
