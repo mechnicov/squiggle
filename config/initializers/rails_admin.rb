@@ -37,6 +37,7 @@ RailsAdmin.config do |config|
     ## With an audit adapter, you can add:
     # history_index
     # history_show
+    nestable
   end
 
   config.model Category do
@@ -67,5 +68,11 @@ RailsAdmin.config do |config|
       end
       field :items
     end
+
+    nestable_tree({
+      position_field: :position,
+      live_update: :only,
+      max_depth: 20
+    })
   end
 end

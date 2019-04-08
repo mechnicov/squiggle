@@ -20,6 +20,7 @@ gem 'friendly_id', '~> 5.2.4'
 gem 'babosa'
 gem 'ancestry'
 gem 'acts_as_list'
+gem 'rails_admin_nestable', '~> 0.3.2'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
