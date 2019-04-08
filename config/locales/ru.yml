@@ -176,3 +176,4 @@ ru:
     flash:
       error: "%{name} не %{action}"
   are_you_sure: Вы уверены?
+  not_authorized: Недостаточно прав для данного действия

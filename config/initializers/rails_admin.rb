@@ -23,6 +23,13 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
 
+  config.authorize_with do |controller|
+    unless current_user.try(:is_admin)
+      flash[:alert] = I18n.t('not_authorized')
+      redirect_to main_app.root_url
+    end
+  end
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
@@ -38,6 +45,7 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
     nestable
+    toggle
   end
 
   config.model Category do
@@ -74,5 +82,21 @@ RailsAdmin.config do |config|
       live_update: :only,
       max_depth: 20
     })
+  end
+
+  config.model User do
+    list do
+      field :id
+      field :email
+      field :is_admin, :toggle
+      field :created_at
+      field :updated_at
+    end
+
+    edit do
+      field :email
+      field :password
+      field :is_admin, :toggle
+    end
   end
 end
