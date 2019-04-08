@@ -34,12 +34,14 @@ ru:
         name: Название
         description: Описание
         photo: Фотография
+        slug: Слаг
         created_at: Создан
         updated_at: Обновлён
         category: Категория
       category:
         id: '#'
         name: Название
+        slug: Слаг
         created_at: Создана
         updated_at: Обновлена
         items: Товары

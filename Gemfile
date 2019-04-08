@@ -16,6 +16,8 @@ gem 'rmagick'
 gem 'fog-aws'
 gem 'rails_admin', '~> 1.3'
 gem 'rails_admin-i18n'
+gem 'friendly_id', '~> 5.2.4'
+gem 'babosa'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
