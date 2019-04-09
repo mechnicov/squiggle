@@ -8,13 +8,13 @@ class Category < ApplicationRecord
   acts_as_list scope: '#{ancestry ? "ancestry = \'#{ancestry}\'" : \'ancestry IS NULL\'}'
 
   validates :name, presence: true
-  validates :slug, uniqueness: true
+  validates :slug, uniqueness: { case_sensitive: false }
 
   before_validation :downcase_slug
 
   private
 
   def downcase_slug
-     slug.downcase! if slug.present?
+    slug.downcase! if slug.present?
   end
 end
