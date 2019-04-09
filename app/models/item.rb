@@ -8,7 +8,7 @@ class Item < ApplicationRecord
 
   validates :name, presence: true
   validates :price, numericality: { only_integer: true, greater_than: 0 }
-  validates :slug, uniqueness: true
+  validates :slug, uniqueness: { case_sensitive: false }
 
   before_validation :downcase_slug
 
