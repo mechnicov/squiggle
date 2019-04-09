@@ -45,7 +45,6 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
     nestable
-    toggle
   end
 
   config.model Category do
@@ -88,7 +87,7 @@ RailsAdmin.config do |config|
     list do
       field :id
       field :email
-      field :is_admin, :toggle
+      field :is_admin
       field :created_at
       field :updated_at
     end
@@ -96,7 +95,7 @@ RailsAdmin.config do |config|
     edit do
       field :email
       field :password
-      field :is_admin, :toggle
+      field :is_admin
     end
   end
 end
