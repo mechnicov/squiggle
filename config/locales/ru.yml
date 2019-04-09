@@ -177,3 +177,6 @@ ru:
       error: "%{name} не %{action}"
   are_you_sure: Вы уверены?
   not_authorized: Недостаточно прав для данного действия
+  recaptcha:
+    errors:
+    verification_failed: Подтвердите, что Вы не робот
