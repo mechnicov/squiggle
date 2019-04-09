@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  encoding: unicode
+
+development:
+  <<: *default
+  database: squiggle
+
+test:
+  <<: *default
+  database: squiggle_test
+
+production:
+  <<: *default
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  database: squiggle_prod
+  user: squiggle
+  password: squiggle

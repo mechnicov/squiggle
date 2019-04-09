@@ -22,7 +22,7 @@ gem 'friendly_id', '~> 5.2.4'
 gem 'babosa'
 gem 'ancestry'
 gem 'acts_as_list'
-gem 'haml-rails'
+gem 'haml-rails', '~> 1.0'
 gem 'bootstrap-sass', '~> 3.4.1'
 
 group :development, :test do
@@ -32,6 +32,11 @@ end
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'letter_opener'
+  gem 'capistrano', '~> 3.11.0'
+  gem 'capistrano-rails', '~> 1.3.0'
+  gem 'capistrano-passenger', '~> 0.2'
+  gem 'capistrano-rbenv', '~> 2.1'
+  gem 'capistrano-bundler', '~> 1.4.0'
 end
 
 group :test do
