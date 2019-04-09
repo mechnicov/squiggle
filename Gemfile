@@ -24,6 +24,7 @@ gem 'ancestry'
 gem 'acts_as_list'
 gem 'haml-rails', '~> 1.0'
 gem 'bootstrap-sass', '~> 3.4.1'
+gem 'faker'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
