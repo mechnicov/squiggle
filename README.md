@@ -71,10 +71,23 @@ $ rails db:create
 $ rails db:migrate
 ```
 
-5. Для заполнения базы данных используйте следующую команду.
+5. Запустите сервер.
+
+```console
+$ rails s
+```
+
+6. Для заполнения базы данных используйте следующую команду.
 
 ```console
 $ rails db:seed
 ```
 
-6. При необходимости развёртывания приложения при помощи Capistrano, отредактируйте `Capfile`, `config/deploy.rb` и  `config/deploy/production.rb` в соответствии со своими требованиями.
+7. Для назначения пользователя (например, id 5) правами администратора выполните команду.
+
+```console
+$ rails с
+>> User.find(5).update_attribute(:is_admin, true)
+```
+
+8. При необходимости развёртывания приложения при помощи Capistrano, отредактируйте `Capfile`, `config/deploy.rb` и  `config/deploy/production.rb` в соответствии со своими требованиями.
