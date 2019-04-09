@@ -6,7 +6,7 @@ module ItemsHelper
 
   def item_thumb(item)
     return item.photo.thumb.url if item.photo.file.present?
-    asset_url('item_thumb')
+    asset_url('item_thumb.jpg')
   end
 
   def item_price(item)
