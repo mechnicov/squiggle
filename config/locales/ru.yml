@@ -56,6 +56,12 @@ ru:
         child_ids: Подкатегории
         position: Позиция среди категорий одного уровня
         ancestry: Иерархия id
+    validation:
+      error:
+        one: '%{count} ошибка'
+        few: '%{count} ошибки'
+        many: '%{count} ошибок'
+        other: '%{count} ошибки'
   category:
     label_plural:
       zero: 'Категорий нет'
