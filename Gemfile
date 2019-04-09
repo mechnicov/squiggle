@@ -39,6 +39,7 @@ group :development do
   gem 'capistrano-passenger', '~> 0.2'
   gem 'capistrano-rbenv', '~> 2.1'
   gem 'capistrano-bundler', '~> 1.4.0'
+  gem 'rails_real_favicon'
 end
 
 group :test do
