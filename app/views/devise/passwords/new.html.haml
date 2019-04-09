@@ -7,6 +7,6 @@
         = f.label :email
         = f.email_field :email, class: 'form-control'
       .actions
-        = f.submit 'Восстановить пароль', class: 'btn btn-primary'
+        = invisible_recaptcha_tags text: 'Восстановить пароль', class: 'btn btn-primary'
     .buffer-both
       = render 'devise/shared/links'
