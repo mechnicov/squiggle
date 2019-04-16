@@ -23,7 +23,6 @@ gem 'ancestry'
 gem 'acts_as_list'
 gem 'haml-rails', '~> 1.0'
 gem 'bootstrap-sass', '~> 3.4.1'
-gem 'faker'
 gem 'recaptcha'
 
 group :development, :test do
@@ -39,6 +38,7 @@ group :development do
   gem 'capistrano-rbenv', '~> 2.1'
   gem 'capistrano-bundler', '~> 1.4.0'
   gem 'rails_real_favicon'
+  gem 'faker'
 end
 
 group :test do
